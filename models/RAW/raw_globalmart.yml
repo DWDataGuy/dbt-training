@@ -1,9 +1,15 @@
-version: 2
+version: 2 
 
-models:
-  - name: raw_customer
-    columns:
-      - name: customerid
-        tests:
-          - unique
-          - not_null
+models: 
+- name: raw_orders 
+  columns:
+  - name: orderid 
+tests:
+  - name: shipmode 
+    tests:
+        - accepted_values: 
+          values:
+           - 'First Class'
+           - 'Same Day'
+           - 'Second Class'
+           - 'Standard Class' 
