@@ -1,0 +1,15 @@
+version: 2 
+
+models: 
+- name: raw_orders 
+  columns:
+  - name: orderid 
+tests:
+  - name: shipmode 
+    tests:
+        - accepted_values: 
+          values:
+           - 'First Class'
+           - 'Same Day'
+           - 'Second Class'
+           - 'Standard Class' 
