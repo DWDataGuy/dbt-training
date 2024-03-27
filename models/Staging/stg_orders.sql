@@ -19,6 +19,7 @@ p.productid,
 p.category,
 p.productname,
 p.subcategory,
+{{ markup() }} as markup 
 
 from {{ ref('RAW_ORDERS')}} as o
 left join {{ ref('RAW_CUSTOMER') }} as c
